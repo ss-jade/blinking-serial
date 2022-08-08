@@ -115,7 +115,7 @@ next, add your user to the group and try again
 ```
 sudo usermod -a -G uucp $USER
 ```
-**Note: you need to relogin into you session and try to upload again.**
+**Note: you need to relogin into your session and try to upload again.**
 
 ```
 groups
