@@ -101,18 +101,23 @@ and must probably you will requiere pip3 python package manager:
 sudo pacman -Sy python-pip
 ```
 ## `Permission denied: '/dev/ttyUSB0'`
+If you try to upload the code to the ESP32 board and receives the next error:
 
+```
+Permission denied: '/dev/ttyUSB0'`
+```
+thus, check the ttyUSB0' group by listing: 
 ```
 ls -l /dev/ttyUSB0
 crw-rw---- 1 root uucp 188, 0 Aug  7 14:50 /dev/ttyUSB0
 ```
-
+next, add your user to the group and try again
 ```
 sudo usermod -a -G uucp $USER
+```
+**Note: you need to relogin into you session and try to upload again.**
+
+```
 groups
 libvirt uucp gmarx
 ```
-
-**Note: you need to relogin into you session.**
-
-
